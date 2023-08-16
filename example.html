@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .sections{
+            height: 500px;
+            background: red;
+            width: 500px;
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+            top: 100px;
+        }
+
+        .sections.opens{
+            opacity: 1;
+            top: 0;
+            visibility: visible;
+            transition: 300ms ease all;
+        }
+
+        .secs.open{
+            right: 0;
+        }
+
+        .secs{
+            height: 500px;
+            background: red;
+            width: 500px;
+            position: relative;
+            right: -100%;
+        }
+    </style>
+    <button id="btn">Hello</button>
+    <button id="btns">Hi</button>
+
+
+    <section class="sections">
+        <h3>How are you?</h3>
+    </section>
+
+    <section class=" secs">
+        <h3>How are you?</h3>
+    </section>
+
+    <script>
+        				
+
+let sliders = document.querySelector('#btn');
+let filters = document.querySelector('.sections');
+
+sliders.onclick = () => {
+    sliders.classList.toggle('bx-x');
+    filters.classList.toggle ('opens');
+}
+
+        				
+
+let slider = document.querySelector('#btns');
+let filter = document.querySelector('.secs');
+
+slider.onclick = () => {
+    slider.classList.toggle('bx-x');
+    filter.classList.toggle ('open');
+}
+    </script>
+</body>
+</html>
