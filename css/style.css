@@ -6356,8 +6356,6 @@ a{
    
 
    .overlay-media-tab{
-    /* height: 100vh;
-    z-index: 9999; */
     padding: 20px 50px;
     height: 100vh;
     position: fixed;
@@ -6365,29 +6363,97 @@ a{
     top: 0;
     z-index: 9999;
     background: #00000096;
-    display: none;
+    overflow: hidden;
+    /* display: none; */
    }
 
-   @media screen  and (max-width:766px){
+   @media screen  and (max-width:771px){
     .overlay-media-tab{
       padding: 0;
     }
    }
-
+   body{
+    height: 100vh;
+    overflow: hidden;
+   }
    
   .media-tab{
     background: #fff;
     width: 100%;
     border-radius: 10px;
     height: 100%;
-    /* position: fixed; */
-    top: 100px;
+    position: relative;
     z-index: 99;
+    padding: 10px 0px 40px 30px;
     overflow: hidden;
    }
 
+   @media screen  and (max-width:992px){
+    .media-tab{
+      padding: 10px 30px 40px 30px;
+    }
+   }
+
+   .media-tab .media-details .image-detail-cont{
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+    position: relative;
+    margin-bottom: 50px;
+   }
+   .media-tab .media-details .image-detail-cont .image-detail{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
+    overflow-y: scroll;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+   }
+
+   .media-tab .media-details .image-detail-cont .image-detail::-webkit-scrollbar{
+    width: 10px;
+}
+
+.media-tab .media-details .image-detail-cont .image-detail::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.media-tab .media-details .image-detail-cont .image-detail::-webkit-scrollbar-thumb{
+    background-color: #FF6600;
+    border-radius: 20px;
+}
+
+
+   .media-tab .media-details .image-detail .item{
+    height: 300px;
+   }
+
+   @media screen and (max-width:565px){
+    
+   .media-tab .media-details .image-detail .big{
+    grid-column: span 1 !important;
+    height: 300px !important;
+   }
+   }
+
+   .media-tab .media-details .image-detail .big{
+    grid-column: span 2;
+    height: 400px;
+   }
+
+
+   .media-tab .media-details .image-detail .item img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+   }
+
      .media-tab .media-tab-header{
-    padding: 10px 20px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #ededed;
     display: flex;
     justify-content: space-between;
@@ -6406,7 +6472,7 @@ a{
    }
 
      .media-tab .media-tab-header .header-btn button:hover{
-    border: none;
+    /* border: none; */
     background: #FF6600;
     color: #fff;
    }
@@ -6433,6 +6499,12 @@ a{
     width: 100%;
    }
 
+   @media screen and (max-width:461px){
+    .sub-header{
+      display: none;
+    }
+   }
+
      .sub-header ul{
     display: flex;
     list-style: none;
@@ -6451,6 +6523,81 @@ a{
     border: none;
     padding-left: 0;
    }
+
+
+   .media-details .schedule-tour-cover{
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+    position: relative;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-head{
+    padding: 10px;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-head h5{
+    text-transform: capitalize;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+   }
+
+   
+   .media-details .schedule-tour-cover .schedule-tour .tour-content{
+    padding-right: 10px;
+  }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form .form-group p{
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form .form-group select,
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form .form-group input,
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form .area-text textarea{
+    width: 100%;
+    outline: none;
+    padding: 5px;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form .form-group select{
+    text-transform: capitalize;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form .form-group, input::placeholder{
+    text-transform: capitalize;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form button{
+    outline: none;
+    border: 2px solid #FF6600;
+    background: #FF6600;
+    color: #ffffff;
+    text-transform: capitalize;
+    padding: 7px 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    transition: 300ms;
+   }
+
+   .media-details .schedule-tour-cover .schedule-tour .tour-content form button:hover{
+    border: 2px solid #ff6600;
+    background: transparent;
+    color: #ff6600;
+   }
+
 
    .filter-content-footer{
     background: #fefefe;
