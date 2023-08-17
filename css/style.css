@@ -6412,6 +6412,24 @@ a{
     overflow-x: hidden;
    }
 
+   @media screen and (min-width:1365px){
+    
+    .media-tab .media-details .image-detail .big{
+     grid-column: span 2 !important;
+     height: 600px !important;
+    }
+
+    .media-tab .media-details .image-detail-cont .image-detail{
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+     }
+     
+
+   .media-tab .media-details .image-detail .item{
+    height: 400px !important;
+   }
+
+    }
+
    .media-tab .media-details .image-detail-cont .image-detail::-webkit-scrollbar{
     width: 10px;
 }
