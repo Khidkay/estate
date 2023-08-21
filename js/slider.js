@@ -19,13 +19,6 @@ let sliderTracks = document.querySelector(".slider-tracks");
 let sliderMaxValue = document.getElementById("slider-1").max;
 let sliderMaxValues = document.getElementById("slider-11").max;
 
-function slideOne(){
-    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
-        sliderOne.value = parseInt(sliderTwo.value) - minGap;
-    }
-    displayValOne.textContent = sliderOne.value;
-    fillColor();
-}
 
 
 function slideOnes(){
@@ -36,13 +29,6 @@ function slideOnes(){
     fillColor();
 }
 
-function slideTwo(){
-    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
-        sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    }
-    displayValTwo.textContent = sliderTwo.value;
-    fillColor();
-}
 
 function slideTwos(){
     if(parseInt(sliderTwos.value) - parseInt(sliderOnes.value) <= minGap){
@@ -60,13 +46,6 @@ function fillColor(){
     sliderTracks.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #1b1b1b ${percent1}% , #1b1b1b ${percent2}%, #dadae5 ${percent2}%)`;
 }
 
-
-function fillColor(){
-    percent1 = (sliderOne.value / sliderMaxValue) * 100;
-    percent2 = (sliderTwo.value / sliderMaxValue) * 100;  
-    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #1b1b1b ${percent1}% , #1b1b1b ${percent2}%, #dadae5 ${percent2}%)`;
-
-}
 
 
 

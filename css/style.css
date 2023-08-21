@@ -4428,9 +4428,9 @@ a{
           right: 0;
           opacity: 0;
           visibility: hidden;
-          height: 85vh !important;
+          height: 80vh !important;
           overflow: hidden;
-          width: 30% !important;
+          width: 100% !important;
           background: #fff;
           z-index: 999;
           overflow-y: scroll;
@@ -4441,7 +4441,7 @@ a{
         }
 
         .filter-spaces.spaces{
-          top: 10%;
+          top: 9%;
           height: 90vh !important;
         }
 
@@ -4460,7 +4460,7 @@ a{
       }
       
       .filter-spaces::-webkit-scrollbar-thumb{
-          background-color: #1b1b1b;
+          background-color: #ff6600;
           border-radius: 20px;
       }
 
@@ -4477,24 +4477,37 @@ a{
         }
 
         .filter-spaces .reset button{
-          background: transparent;
-          border: 1px solid #000;
+          border-radius: 5px;
+          background: #ff6600;
+          border: 2px solid #ff6600;
           outline: none;
-          color: #000;
-          font-size: 12px;
+          color: #fff;
+          font-size: 14px;
           text-transform: capitalize;
           padding: 6px 21px;
           font-family: Montserrat, sans-serif;
           line-height: 16px;
           width: 50%;
+          transition: 300ms;
+        }
+
+        .filter-spaces .reset button:hover{
+          color: #ff6600;
+          background: transparent;
+        }
+
+        .filter-spaces .reset a:hover{
+          color: #fff;
+          background: #ff6600;
         }
 
         .filter-spaces .reset a{
           background: transparent;
-          border: 1px solid #000;
+          border: 2px solid #ff6600;
           outline: none;
-          color: #000;
-          font-size: 12px;
+          color: #ff6600;
+          font-size: 14px;
+          border-radius: 5px;
           text-transform: capitalize;
           padding: 6px 21px;
           font-family: Montserrat, sans-serif;
@@ -4502,14 +4515,11 @@ a{
           margin-left: 10px;
           text-align: center;
           width: 50%;
+          transition: 300ms;
         }
+        
 
-        .filter-spaces .search{
-          margin-top: 20px;
-          /* background: red !important; */
-        }
-
-        .filter-spaces .search p{
+        .filter-spaces p{
           font-size: 13px;
           font-family: Montserrat, sans-serif;
           font-weight: 600;
@@ -4517,14 +4527,101 @@ a{
           margin-bottom: 1px;
         }
 
-        .filter-spaces .search input{
+        .filter-spaces .search-main{
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .filter-spaces .search-main > div input,
+        .filter-spaces .search-main > div select,
+        .filter-spaces .search-main > div button{
           width: 100%;
-          background: #E9E9E9;
-          border: none;
+        }
+
+        .filter-spaces .search-main > div{
+          width: 20%;
+          padding: 0 10px;
+        }
+
+        .filter-spaces .search-main .search-btn p{
+          visibility: hidden;
+        }
+
+        .filter-spaces .search-main > div:first-child{
+          margin-left: 0px;
+          width: 50%;
+        }
+
+        @media screen and (max-width:663px){
+          .filter-spaces .search-main > div{
+            width: 50% !important;
+          }
+
+          .filter-spaces .search-main .max-price{
+            margin-bottom: 0px !important;
+          }
+  
+        }
+
+        
+        @media screen and (max-width:316px){
+          .filter-spaces .search-main > div{
+            width: 100% !important;
+          }
+
+          .filter-spaces .search-main .max-price{
+            margin-bottom: 0px;
+          }
+  
+        }
+
+        .filter-spaces .search-main > div:nth-child(2){
+          width: 25%;
+        }
+
+        
+        .filter-spaces .search-main > div:nth-child(3){
+          width: 25%;
+        }
+
+        
+        .filter-spaces .search-main div input{
+          background: #fff;
+          border: 2px solid #ff6600;
           outline: none;
           padding: 10px 10px;
           font-family: Montserrat, sans-serif;
           text-transform: capitalize;
+          border-radius: 5px;
+        }
+
+        .filter-spaces .search-main div button{
+          background: #ff6600;
+          border: 2px solid #ff6600;
+          outline: none;
+          padding: 10px 10px;
+          font-family: Montserrat, sans-serif;
+          text-transform: capitalize;
+          border-radius: 5px;
+          color: #fff;
+        }
+
+        .filter-spaces .search-main .max-price{
+          margin-bottom: 20px;
+        }
+
+        .filter-spaces .search-main div button a{
+          color: #fff;
+        }
+
+        .filter-spaces .search-main div select{
+          background: #fff;
+          border: 2px solid #ff6600;
+          outline: none;
+          padding: 10px 10px;
+          font-family: Montserrat, sans-serif;
+          text-transform: capitalize;
+          border-radius: 5px;
         }
 
         .filter-spaces .price-range{
@@ -4615,13 +4712,38 @@ a{
           color: black;
         }
 
+        .filter-spaces .property-type .show-me{
+          position: relative;
+          top: 100px;
+          display: none !important;
+          transition: 300ms;
+          opacity: 0;
+        }
+
+        .filter-spaces .property-type .show-me.feat{
+          top: 0;
+          opacity: 1;
+          display: flex !important;
+        }
+
+        .filter-spaces .property-type p span{
+          font-size: 12px;
+          cursor: pointer;
+          transition: 300ms;
+        }
+
+        .filter-spaces .property-type p span:focus{
+          transform: rotate(-180deg)
+        }
+
 
         .filter-spaces .property-type .property-show{
           display: flex;
+          flex-wrap: wrap;
         }
 
-        .filter-spaces .property-type .property-show .card{
-          width: 50%;
+        .filter-spaces .property-type .property-show .item{
+          padding: 0px 20px 5px 0px;
         }
 
         .filter-spaces .property-type .item select{
@@ -4736,7 +4858,7 @@ a{
           height: 1.7em;
           width: 1.7em;
           background-color: #ffffff;
-          border: 3px solid #1b1b1b;
+          border: 3px solid #ff6600;
           cursor: pointer;
           border-radius: 10px;
           pointer-events: auto;
@@ -4749,7 +4871,7 @@ a{
           width: 1.7em;
           cursor: pointer;
           border-radius: 50%;
-          background-color: #1b1b1b;
+          background-color: #ff6600;
           pointer-events: auto;
         }
 
@@ -4759,12 +4881,12 @@ a{
           width: 1.7em;
           cursor: pointer;
           border-radius: 50%;
-          background-color: #1b1b1b;
+          background-color: #ff6600;
           pointer-events: auto;
         }
 
         .filter-spaces .slider input[type="range"]:active::-webkit-slider-thumb{
-          background-color: #1b1b1b;
+          background-color: #ff6600;
         }
 
         .filter-spaces .slider .values{
@@ -4772,7 +4894,7 @@ a{
           position: relative;
           top: -25px;
           border: 5px;
-          color: #1b1b1b;
+          color: #ff6600;
           font-weight: 500;
           font-size: 16px;
         }

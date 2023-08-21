@@ -1,37 +1,35 @@
 window.onload = function(){
-    slideOnes();
-    slideTwos();
+    slideOne();
+    slideTwo();
 }
 
-let sliderOnes = document.getElementById("slider-11");
-let sliderTwos = document.getElementById("slider-22");
-let displayValOnes = document.getElementById("range11");
-let displayValTwos = document.getElementById("range22");
+let sliderOne = document.getElementById("slider-1");
+let sliderTwo = document.getElementById("slider-2");
+let displayValOne = document.getElementById("range1");
+let displayValTwo = document.getElementById("range2");
 let minGap = 0;
 let sliderTrack = document.querySelector(".slider-track");
-let sliderMaxValues = document.getElementById("slider-11").max;
+let sliderMaxValue = document.getElementById("slider-1").max;
 
-function slideOnes(){
-    if(parseInt(sliderTwos.value) - parseInt(sliderOnes.value) <= minGap){
-        sliderOnes.value = parseInt(sliderTwos.value) - minGap;
+function slideOne(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
     }
-    displayValOnes.textContent = sliderOnes.value;
+    displayValOne.textContent = sliderOne.value;
     fillColor();
 }
-function slideTwos(){
-    if(parseInt(sliderTwos.value) - parseInt(sliderOnes.value) <= minGap){
-        sliderTwos.value = parseInt(sliderOnes.value) + minGap;
+function slideTwo(){
+    if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
     }
-    displayValTwos.textContent = sliderTwos.value;
+    displayValTwo.textContent = sliderTwo.value;
     fillColor();
 }
 function fillColor(){
-    percent1 = (sliderOnes.value / sliderMaxValue) * 100;
-    percent2 = (sliderTwos.value / sliderMaxValue) * 100;
-    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #1b1b1b ${percent1}% , #1b1b1b ${percent2}%, #dadae5 ${percent2}%)`;
+    percent1 = (sliderOne.value / sliderMaxValue) * 100;
+    percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+    sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
 }
-
-
 
 
 
@@ -43,3 +41,11 @@ slider.onclick = () => {
     filter.classList.toggle ('opens');
 }
 
+
+let showFeat = document.querySelector('#show-feats');
+let feats = document.querySelector('.show-me');
+
+showFeat.onclick = () => {
+    showFeat.classList.toggle('bx-x');
+    feats.classList.toggle ('feat');
+}
