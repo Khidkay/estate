@@ -88,24 +88,78 @@
 		</div>
 		<form method="post">
 			<div class="form-group">
-				<p>Inquiry Type <span>*</span></p>
-				<div class="select-box">
-					<p class="select-name">Select Inquiry</p>
-					<i class="bx bx-chevron-down"></i>
-				</div>
-				<div class="select-item-box">
-					<div class="select-item">
-						<p class="item-name">Purchase</p>
-					</div>
-					
-					<div class="select-item">
-						<p class="item-name">Rent</p>
-					</div>
+				<label for="type">Inquiry Type <span>*</span></label>
+				<select name="type" id="type">
+					<option value="">---</option>
+					<option value="" id="purchase">Purchase</option>
+					<option value="" id="rent">Rent</option>
+					<option value="" id="mortage">Mortage</option>
+				</select>
+			</div>
 
-					
-					<div class="select-item">
-						<p class="item-name">Mortage</p>
-					</div>
+			
+			<div class="form-group">
+				<label for="type">Information<span>*</span></label>
+				<select name="info" id="info" title="Information">
+					<option value="">I am a</option>
+					<option value="" id="purchase">first time buyer</option>
+					<option value="" id="rent">Real Estate agent</option>
+					<option value="" id="mortage">real Estate investor</option>
+				</select>
+			</div>
+
+			<div class="form-groups">
+				<div class="form-group">
+					<input type="text" name="Fname" placeholder="Enter first name" title="First Name">
+				</div>
+				
+				<div class="form-group">
+					<input type="text" name="Lname" placeholder="Enter last name" title="Last Name">
+				</div>
+			</div>
+
+			
+
+			<div class="form-groups">
+				<div class="form-group">
+					<input type="email" name="email" placeholder="Enter email" title="Email">
+				</div>
+				
+				<div class="form-group">
+					<input type="text" name="mobile" placeholder="Enter Mobile Number" title="Mobile Number">
+				</div>
+			</div>
+
+				
+			<div class="form-group">
+				<label for="type">Property<span>*</span></label>
+				<select name="info" id="info" title="Information">
+					<option value="">Select type of property interest</option>
+					<option value="" id="purchase">first time buyer</option>
+					<option value="" id="rent">Real Estate agent</option>
+					<option value="" id="mortage">real Estate investor</option>
+				</select>
+			</div>
+			
+
+			<div class="form-groups">
+				<div class="form-group">
+					<input type="text" name="maxBeds" placeholder="Max Beds" title="Maximum Bedrooms">
+				</div>
+				
+				<div class="form-group">
+					<input type="text" name="minBeds" placeholder="Min Beds" title="Minimum Bedrooms">
+				</div>
+			</div>
+
+
+			<div class="form-groups">
+				<div class="form-group">
+					<input type="number" name="maxPrice" placeholder="Max Price" title="Maximum Price">
+				</div>
+				
+				<div class="form-group">
+					<input type="number" name="minPrice" placeholder="Min Price" title="Minimum Price">
 				</div>
 			</div>
 		</form>
