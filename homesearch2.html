@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="css/tiny-slider.css">
 <link rel="stylesheet" href="css/aos.css">
 <link rel="stylesheet" href="css/style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <title>Jalvin Homes: Buy Properties</title>
 <script nonce="f7286340-ba63-4dcf-97f8-f68f45f637dd">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})))))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
 <body>
@@ -69,7 +70,7 @@
 
 
             
-    <div class="header">
+    <!-- <div class="header">
       <div class="header__logo">
         <a href="index-2.html"> <img src="images/jalvinlogofooter.png" alt=""></a>
       </div>
@@ -105,29 +106,39 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+
+    <header>
+		<div class="header-content">
+			<div class="logo"><a href="index.html"><img src="images/jalvinlogofooter.png" alt=""></a></div>
+
+			<div class="nav-links">
+				<li><a href="index.html" class="nav-item">home</a></li>
+				<li><a href="about.html" class="nav-item">Meet Jennifer</a></li>
+				<li><a href="homesearch.html" class="nav-item">property listings</a></li>
+				<li><a href="inquiry.html" class="nav-item">inquiry</a></li>
+				<li><a href="contact.html" class="nav-item">Contact me</a></li>
+				<li><a href="tel:+2349021348995" class="nav-item tel">(+234)9021348995</a></li>
+			</div>
+			<button class="toggle"><i class='bx bx-menu-alt-right'></i></button>
+		</div>
+	</header>
 
 
 <div class="sections">
 
-        <div class="filter-header">
-            
+        
+	<div class="filter-top" id="hanger">
+		<div class="search">
+			<img src="../../images/icons8-search-50.png" alt="">
+			<input type="text" placeholder="address, city, neighborhood">
 
-                <div class="stuffs">
-                    <div class="sliders">
-                        <i class="fas fa-bell"></i>
-                        <i class="fas fa-sliders display"  id="navbar_toggle"></i>
-                        </div>
-                    </div>
-
-                    <div class="search-btns">
-                        <span class="fas fa-search"></span>
-                                <input type="text" placeholder="address, city, neighborhood">
-                        </div>
-            </div>
+			
+			</div>
+		</div>
     <div class="container-max">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-12">
                 <div class="filter-space">
 
                     <div class="reset">
@@ -139,352 +150,458 @@
                         <p>keywords search</p>
                         <input type="text" placeholder="e.g, swimming pool, BQ, Gym">
                         </div>
-                        <div class="price-p">
+                        
+                        
+                        <div class="property-type">
+                            <p>Price Range</p>
+                            <div class="containers">
+                                <div class="slider-labels">
+                                  <div class="caption">
+                                    <strong>Min:</strong> <span id="slider-range-value1"></span>
+                                  </div>
+                                  <div class="text-right caption">
+                                    <strong>Max:</strong> <span id="slider-range-value2"></span>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <div id="slider-range"></div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-12">
+                                    <form>
+                                      <input type="hidden" name="min-value" value="">
+                                      <input type="hidden" name="max-value" value="">
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+
                             
-                        <p>Price Range</p>
-                            </div>
-                        <div class="price-range">
-                            <select name="Minprice" id="">
-								<option value="">Min Price</option>
-								<option value="fourtyX">NGN 40,000,000.00</option>
-								<option value="fiftyX">NGN 50,000,000.00</option>
-								<option value="sixtyX">NGN 60,000,000.00</option>
-								<option value="eightyX">NGN 80,000,000.00</option>
-								<option value="nintyX">NGN 90,000,000.00</option>
-								<option value="hundredX">NGN 100,000,000.00</option>
-								<option value="hundredtenX">NGN 110,000,000.00</option>
-								<option value="hundredtwoX">NGN 120,000,000.00</option>
-								<option value="hundredthreeX">NGN 130,000,000.00</option>
-								<option value="hundredfourX">NGN 140,000,000.00</option>
-								<option value="hundredfiveX">NGN 150,000,000.00</option>
-								<option value="hundredsixX">NGN 160,000,000.00</option>
-								<option value="hundredsevenX">NGN 170,000,000.00</option>
-								<option value="hundredeightX">NGN 180,000,000.00</option>
-								<option value="hundrednineX">NGN 190,000,000.00</option>
-								<option value="twohundredX">NGN 200,000,000.00</option>
-								<option value="twohundredoneX">NGN 210,000,000.00</option>
-								<option value="twohundredtwoX">NGN 220,000,000.00</option>
-								<option value="twohundredthreeX">NGN 230,000,000.00</option>
-								<option value="twohundredfourX">NGN 240,000,000.00</option>
-								<option value="twohundredfiveX">NGN 250,000,000.00</option>
-								<option value="threehundredX">NGN 300,000,000.00</option>
-								<option value="threehundredfiveX">NGN 350,000,000.00</option>
-								<option value="fourhundredX">NGN 400,000,000.00</option>
-								<option value="fivehundredX">NGN 500,000,000.00</option>
-								<option value="fivehundredfiveX">NGN 550,000,000.00</option>
-								<option value="sixhundredX">NGN 600,000,000.00</option>
-								<option value="sixhundredfiveX">NGN 650,000,000.00</option>
-								<option value="seventyhundredX">NGN 700,000,000.00</option>
-								<option value="seventyhundredfiveX">NGN 750,000,000.00</option>
-								<option value="eighthundredX">NGN 800,000,000.00</option>
-								<option value="eighthundredX">NGN 850,000,000.00</option>
-								<option value="ninehundredX">NGN 900,000,000.00</option>
-								<option value="ninehundredfiveX">NGN 950,000,000.00</option>
-								<option value="oneX">NGN 1,000,000,000.00</option>
-								<option value="onefiveX">NGN 1,500,000,000.00</option>
-								<option value="twoX">NGN 2,000,000,000.00</option>
-							</select>
 
+                            <div class="property-type">
+                                <p>Property types</p>
 
-                            <span>to</span>
+                    <div class="containers">
+                        <div class="select-btn">
+                            <span class="btn-text">0 Selected</span>
+                            <span class="arrow-dwn">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+            
+                        <ul class="list-items">
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Duplex <span class="list-num">10</span></span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Bootstrap</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">JavaScript</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Node.Js</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">React JS</span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">Mango DB</span>
+                            </li>
+                        </ul>
+                    </div>
 
-
-                            <select name="Maxprice" id="">
-								<option value="">Max Price</option>
-								<option value="fourtyX">NGN 40,000,000.00</option>
-								<option value="fiftyX">NGN 50,000,000.00</option>
-								<option value="sixtyX">NGN 60,000,000.00</option>
-								<option value="eightyX">NGN 80,000,000.00</option>
-								<option value="nintyX">NGN 90,000,000.00</option>
-								<option value="hundredX">NGN 100,000,000.00</option>
-								<option value="hundredtenX">NGN 110,000,000.00</option>
-								<option value="hundredtwoX">NGN 120,000,000.00</option>
-								<option value="hundredthreeX">NGN 130,000,000.00</option>
-								<option value="hundredfourX">NGN 140,000,000.00</option>
-								<option value="hundredfiveX">NGN 150,000,000.00</option>
-								<option value="hundredsixX">NGN 160,000,000.00</option>
-								<option value="hundredsevenX">NGN 170,000,000.00</option>
-								<option value="hundredeightX">NGN 180,000,000.00</option>
-								<option value="hundrednineX">NGN 190,000,000.00</option>
-								<option value="twohundredX">NGN 200,000,000.00</option>
-								<option value="twohundredoneX">NGN 210,000,000.00</option>
-								<option value="twohundredtwoX">NGN 220,000,000.00</option>
-								<option value="twohundredthreeX">NGN 230,000,000.00</option>
-								<option value="twohundredfourX">NGN 240,000,000.00</option>
-								<option value="twohundredfiveX">NGN 250,000,000.00</option>
-								<option value="threehundredX">NGN 300,000,000.00</option>
-								<option value="threehundredfiveX">NGN 350,000,000.00</option>
-								<option value="fourhundredX">NGN 400,000,000.00</option>
-								<option value="fivehundredX">NGN 500,000,000.00</option>
-								<option value="fivehundredfiveX">NGN 550,000,000.00</option>
-								<option value="sixhundredX">NGN 600,000,000.00</option>
-								<option value="sixhundredfiveX">NGN 650,000,000.00</option>
-								<option value="seventyhundredX">NGN 700,000,000.00</option>
-								<option value="seventyhundredfiveX">NGN 750,000,000.00</option>
-								<option value="eighthundredX">NGN 800,000,000.00</option>
-								<option value="eighthundredX">NGN 850,000,000.00</option>
-								<option value="ninehundredX">NGN 900,000,000.00</option>
-								<option value="ninehundredfiveX">NGN 950,000,000.00</option>
-								<option value="oneX">NGN 1,000,000,000.00</option>
-								<option value="onefiveX">NGN 1,500,000,000.00</option>
-								<option value="twoX">NGN 2,000,000,000.00</option>
-							</select>
-                            </div>
-
-                            <div class="beds">
-                                        <div class="bed item"><span>beds</span>
-                                            <select name="beds" id="beds">
-                                                <option value="">0+ Beds</option>
-                                                <option value="">1+ Beds</option>
-                                                <option value="">2+ Beds</option>
-                                                <option value="">3+ Beds</option>
-                                                <option value="">4+ Beds</option>
-                                                <option value="">5+ Beds</option>
-                                                <option value="">6+ Beds</option>
-                                                <option value="">7+ Beds</option>
-    
-                                                </select>    
-                                        </div>
-                                        <div class="baths item"><span>baths</span>
-                                            <select name="baths" id="baths">
-                                                <option value="">0+ Baths</option>
-                                                <option value="">1+ Baths</option>
-                                                <option value="">2+ Baths</option>
-                                                <option value="">3+ Baths</option>
-                                                <option value="">4+ Baths</option>
-                                                <option value="">5+ Baths</option>
-                                                <option value="">6+ Baths</option>
-                                                <option value="">7+ Baths</option>
-    
-                                                </select>
-                                        </div>
+                                
                                 </div>
 
-                                <div class="property-type mt-5">
-                                    <p>Property types</p>
-                                    <div class="property-show">
-                                        
-                                        <div class="card">
-                                            <div class="item">
-                                        <input type="checkbox" name="Co-op" id="Co-op">
-                                        <span>Co-op</span>
-                                        </div>
+                            <div class="property-type">
+                                <p>Beds</p>
+                                
+                    <div class="containers">
+                        <div class="select-btn">
+                            <span class="btn-text">0 Selected</span>
+                            <span class="arrow-dwn">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+            
+                        <ul class="list-items">
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">1 Beds <span class="list-num">10</span></span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">2 Beds <span class="list-num">20</span></span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">3 Beds <span class="list-num">10</span></span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">4 Beds <span class="list-num">10</span></span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">5 Beds <span class="list-num">10</span></span>
+                            </li>
+                            <li class="item">
+                                <span class="checkbox">
+                                    <i class="fa-solid fa-check check-icon"></i>
+                                </span>
+                                <span class="item-text">6 Beds+<span class="list-num">10</span></span>
+                            </li>
+                        </ul>
+                    </div>
 
-                                        <div class="item">
-                                        <input type="checkbox" name="Commercial" id="Commercial">
-                                        <span>Commercial</span>
-                                        </div>
-                                        
-                                        <div class="item">
-                                        <input type="checkbox" name="Residential" id="Residential">
-                                        <span>Residential</span>
-                                        </div>
+                                
+                                </div>
 
-                                        <div class="item">
-                                        <input type="checkbox" name="Land" id="Land">
-                                        <span>Land</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="others" id="others">
-                                        <span>others</span>
-                                        </div>
-                                            </div>
-
-                                            
-                                        <div class="card">
-                                            <div class="item">
-                                        <input type="checkbox" name="Semi-detached" id="Semi-detached">
-                                        <span>Semi detached</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="Commercial" id="Commercial">
-                                        <span>Terrace</span>
-                                        </div>
-                                        
-                                        <div class="item">
-                                        <input type="checkbox" name="Residential" id="Residential">
-                                        <span>Fully Detached</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="Land" id="Land">
-                                        <span>Multi-family</span>
-                                        </div>
-                                            </div>
-                                    </div>
-                                    </div>
-
-                                    <div class="property-type mt-5">
-                                    <p>Property status</p>
-                                    <div class="property-show">
-                                        
-                                        <div class="card">
-                                            
-                                            <div class="item">
-                                        <input type="checkbox" name="Co-op" id="Co-op">
-                                        <span>All Status</span>
-                                        </div>
-
-                                            <div class="item">
-                                        <input type="checkbox" name="Co-op" id="Co-op">
-                                        <span>Co-op</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="Commercial" id="Commercial">
-                                        <span>Commercial</span>
-                                        </div>
-                                        
-                                        <div class="item">
-                                        <input type="checkbox" name="Residential" id="Residential">
-                                        <span>Residential</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="Land" id="Land">
-                                        <span>Land</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="others" id="others">
-                                        <span>others</span>
-                                        </div>
-                                            </div>
-
-                                            
-                                        <div class="card">
-                                            <div class="item">
-                                        <input type="checkbox" name="Semi-detached" id="Semi-detached">
-                                        <span>Semi detached</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="Commercial" id="Commercial">
-                                        <span>Terrace</span>
-                                        </div>
-                                        
-                                        <div class="item">
-                                        <input type="checkbox" name="Residential" id="Residential">
-                                        <span>Fully Detached</span>
-                                        </div>
-
-                                        <div class="item">
-                                        <input type="checkbox" name="Land" id="Land">
-                                        <span>Multi-family</span>
-                                        </div>
-                                            </div>
-                                    </div>
+                                <div class="property-type">
+                                    <p>Baths</p>
+                                    
+                        <div class="containers">
+                            <div class="select-btn">
+                                <span class="btn-text">0 Selected</span>
+                                <span class="arrow-dwn">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                
+                            <ul class="list-items">
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">1 Baths <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">2 Baths <span class="list-num">20</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">3 Baths <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">4 Baths <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">5 Baths <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">6 Baths+<span class="list-num">10</span></span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                                    
                                     </div>
 
-                                    <div class="slider-wrapper">
-                                        <div class="contents">
-                                        <p>Lot size ft <span>2</span></p>
-                                        </div>
-                                        <div class="slider">
-                                            <div class="values">
-                                                <span id="range11">0</span>
-                                                <span id="range22">100 k+</span>
-                                            </div>
-                                            <div class="slider-tracks"></div>
-                                            <input type="range" min="0" max="100" value="0" id="slider-11" oninput="slideOnes()">
-                                            <input type="range" min="0" max="100" value="100" id="slider-22" oninput="slideTwos()">
-                                        </div>
+                                    
+
+                                <div class="property-type">
+                                    <p>Property Status</p>
+                                    
+                        <div class="containers">
+                            <div class="select-btn">
+                                <span class="btn-text">0 Selected</span>
+                                <span class="arrow-dwn">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </div>
+                
+                            <ul class="list-items">
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">For Sale <span class="list-num">109</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">New Listing <span class="list-num">20</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">Off Plan Project <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">Open House <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">Ready to move in <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">Reduced Price<span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">Resale <span class="list-num">10</span></span>
+                                </li>
+                                <li class="item">
+                                    <span class="checkbox">
+                                        <i class="fa-solid fa-check check-icon"></i>
+                                    </span>
+                                    <span class="item-text">Sold Out<span class="list-num">10</span></span>
+                                </li>
+                            </ul>
+                        </div>
+    
+                                    
                                     </div>
 
-
-                                    <div class="property-status property-type mt-5">
-                                        <p>status</p>
-                                        <div class="item">
-                                            <div class="input active">  
-                                        <input type="checkbox" name="Active" id="Active">
-                                        <span>Active</span>
-                                            </div>
-                                            <div class="years">
-                                                <select name="beds" id="beds">
-                                                    <option value="">All</option>
-                                                    <option value="">1 day back</option>
-                                                    <option value="">1 week back</option>
-                                                    <option value="">1 month back</option>
-                                                    <option value="">3 months back</option>
-                                                    <option value="">6 months back</option>
-                                                    <option value="">1 year back</option>
-                                                    <option value="">2 years back</option>
-                                                    <option value="">3 years back</option>
-                                                    <option value="">4 years back</option>
+                                    <div class="property-type">
+                                        <p>Other Features</p>
+                                        
+                            <div class="containers">
+                                <div class="select-btn">
+                                    <span class="btn-text">0 Selected</span>
+                                    <span class="arrow-dwn">
+                                        <i class="fa-solid fa-chevron-down"></i>
+                                    </span>
+                                </div>
+                    
+                                <ul class="list-items">
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Swimming Pool <span class="list-num">9</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">24 hour power supply <span class="list-num">20</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">24 Hour Security<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">24 Hour Water Supply <span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Air Conditioning<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Barbeque<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Boat Jetty<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Dancing Water Display<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">CCTV<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Earth Road<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Dryer<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Electricity<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Elevator<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Estate Lounge<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Fully Fitted Kitchen<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Gate House<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Good Drainage<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Jacuzzi<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Gym<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Kids Playground<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Lagoon Front View<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Laundry<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Microwave<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Lawn<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Outdoor Shower<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Perimeter Fencing<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Refrigerator<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">In-built Bluetooth speakers<span class="list-num">10</span></span>
+                                    </li>
+                                    <li class="item">
+                                        <span class="checkbox">
+                                            <i class="fa-solid fa-check check-icon"></i>
+                                        </span>
+                                        <span class="item-text">Smart home<span class="list-num">10</span></span>
+                                    </li>
+                                </ul>
+                            </div>
         
-                                                    </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="input pending">  
-                                        <input type="checkbox" name="Active" id="Active">
-                                        <span>Pending</span>
-                                            </div>
-                                            <div class="years">
-                                                <select name="beds" id="beds">
-                                                    <option value="">All</option>
-                                                    <option value="">1 day back</option>
-                                                    <option value="">1 week back</option>
-                                                    <option value="">1 month back</option>
-                                                    <option value="">3 months back</option>
-                                                    <option value="">6 months back</option>
-                                                    <option value="">1 year back</option>
-                                                    <option value="">2 years back</option>
-                                                    <option value="">3 years back</option>
-                                                    <option value="">4 years back</option>
-        
-                                                    </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="input sold">  
-                                        <input type="checkbox" name="Active" id="Active">
-                                        <span>Sold</span>
-                                            </div>
-                                            <div class="years">
-                                                <select name="beds" id="beds">
-                                                    <option value="">All</option>
-                                                    <option value="">1 day back</option>
-                                                    <option value="">1 week back</option>
-                                                    <option value="">1 month back</option>
-                                                    <option value="">3 months back</option>
-                                                    <option value="">6 months back</option>
-                                                    <option value="">1 year back</option>
-                                                    <option value="">2 years back</option>
-                                                    <option value="">3 years back</option>
-                                                    <option value="">4 years back</option>
-        
-                                                    </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="input contract">  
-                                        <input type="checkbox" name="Contract" id="Contract">
-                                        <span>Contract</span>
-                                            </div>
-                                            <div class="years">
-                                                <select name="beds" id="beds">
-                                                    <option value="">All</option>
-                                                    <option value="">1 day back</option>
-                                                    <option value="">1 week back</option>
-                                                    <option value="">1 month back</option>
-                                                    <option value="">3 months back</option>
-                                                    <option value="">6 months back</option>
-                                                    <option value="">1 year back</option>
-                                                    <option value="">2 years back</option>
-                                                    <option value="">3 years back</option>
-                                                    <option value="">4 years back</option>
-        
-                                                    </select>
-                                            </div>
-                                        </div>
                                         
-                                    </div>
+                        </div>
 
 
                                     
@@ -582,8 +699,7 @@
                                         </div>
                                     </div> -->
                     </div>
-                </div>
-                <div class="col-lg-9 col-md-9 col-12">
+                
                     <div class="filter-content">
                         <div class="top">
                             <select name="sort" id="sort">
@@ -600,776 +716,877 @@
                                     </div>
                             </div>
 
-                            <div class="filter-item">
-                        <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
+                            <div class="extra-feature">
+							<div class="content">
+							<div class="extra-img">
+								<section aria-label="Newest Photos">
+          <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+            <ul data-slides>
+              
 
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            <div class="" id="active">
-                            <div class="item">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <a href="property-single.html">
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                        </a>
-                                </div>
-                            </div>
-
-                            
-                        <div class="" id="pending">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="sold">sold</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                </a>
-                                </div>
-                            </div>
-
-                            
-                        <div class="" id="pending">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="pending">pending</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                </a>
-                                </div>
-                            </div>
-
-                            
-                        <div class="" id="pending">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                </a>
-                                </div>
-                            </div>
-
-                            
-                        <div class="" id="pending">
-                            <div class="item">
-                                <a href="#">
-                                    <div class="filter-img">
-                                        <span class="fas fa-heart"></span>
-                                        <img src="images/home2.jpg" alt="home">
-                                        </div>
-                                        <div class="filter-text">
-                                            <div class="price">
-                                                <p><span>N</span>300,000,000</p>
-                                            </div>
-                                            <div class="location">
-                                                <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                            </div>
-                                            <div class="status">
-                                                <p class="active">active</p>
-                                                
-                                                <ul>
-                                                    <li>5 beds</li>
-                                                    <li>4 baths</li>
-                                                    <li>8,500 ft <span>2</span></li>
-                                                </ul>
-                                            </div>
-                                            </div>
-                                </a>
-                                </div>
-                            </div>
-
-                            
-                        <div class="" id="pending">
-                            <div class="item">
-                                <div class="filter-img">
-                                    <span class="fas fa-heart"></span>
-                                    <img src="images/home2.jpg" alt="home">
-                                    </div>
-                                    <div class="filter-text">
-                                        <div class="price">
-                                            <p><span>N</span>300,000,000</p>
-                                        </div>
-                                        <div class="location">
-                                            <p> 1080 PROSPERITY POINTE, Greensboro, GA 30642</p>
-                                        </div>
-                                        <div class="status">
-                                            <p class="sold">sold</p>
-                                            
-                                            <ul>
-                                                <li>5 beds</li>
-                                                <li>4 baths</li>
-                                                <li>8,500 ft <span>2</span></li>
-                                            </ul>
-                                        </div>
-                                        </div>
-                            </div>
-
-                            
-						</div>
+                <li class="slide" data-active>
+				<a href="#">
+					<div class="captions">
+					<span>featured</span>
+					<span>new listing</span>
+					<span>off plan project</span>
 					</div>
+                <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                <div class="under-caption">
+					<p class="price">from <span>₦450,000,000</span></p>
+					</div>
+					</a>
+              </li>
+
+              <li class="slide">
+                <a href="#">
+					<div class="captions">
+					<span>featured</span>
+					<span>new listing</span>
+					<span>for sale</span>
+					</div>
+                <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                <div class="under-caption">
+					<p class="price">from <span>₦450,000,000</span></p>
+					</div>
+					</a>
+              </li>
+              <li class="slide">
+                <a href="#">
+					<div class="captions">
+					<span>featured</span>
+					<span>for sale</span>
+					</div>
+                <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                <div class="under-caption">
+					<p class="price">from <span>₦450,000,000</span></p>
+					</div>
+					</a>
+              </li>
+              <li class="slide">
+                <a href="#">
+					<div class="captions">
+					<span>featured</span>
+					<span>new listing</span>
+					<span>off plan project</span>
+					</div>
+                <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                <div class="under-caption">
+					<p class="price">from <span>₦450,000,000</span></p>
+					</div>
+					</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+								</div>
+            
+            <div class="details">
+               <a href="#">
+                <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                <div class="asking-prices">
+                    <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                    <div class="beds">
+                        <p><i class='bx bx-bed'></i> 5 Beds</p>
+                        <p><i class='bx bx-bath'></i> 5 Baths</p>
+                        </div>
+                    </div>
+                </a>
+
+                    <div class="bottom">
+                        <p class="type">Terrace Duplex</p>
+                        <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                        </div>
+                </div>
+								</div>
+
+                                
+							<div class="content">
+                                <div class="extra-img">
+                                    <section aria-label="Newest Photos">
+              <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                <ul data-slides>
+                  
+    
+                    <li class="slide" data-active>
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+    
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+                                    </div>
+                
+                <div class="details">
+                   <a href="#">
+                    <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                    <div class="asking-prices">
+                        <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                        <div class="beds">
+                            <p><i class='bx bx-bed'></i> 5 Beds</p>
+                            <p><i class='bx bx-bath'></i> 5 Baths</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                        <div class="bottom">
+                            <p class="type">Terrace Duplex</p>
+                            <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                            </div>
+                    </div>
+                                    </div>
+
+                                
+							<div class="content">
+                                <div class="extra-img">
+                                    <section aria-label="Newest Photos">
+              <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                <ul data-slides>
+                  
+    
+                    <li class="slide" data-active>
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+    
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+                                    </div>
+                
+                <div class="details">
+                   <a href="#">
+                    <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                    <div class="asking-prices">
+                        <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                        <div class="beds">
+                            <p><i class='bx bx-bed'></i> 5 Beds</p>
+                            <p><i class='bx bx-bath'></i> 5 Baths</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                        <div class="bottom">
+                            <p class="type">Terrace Duplex</p>
+                            <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                            </div>
+                    </div>
+                                    </div>
+                                
+                                
+							<div class="content">
+                                <div class="extra-img">
+                                    <section aria-label="Newest Photos">
+              <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                <ul data-slides>
+                  
+    
+                    <li class="slide" data-active>
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+    
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+                                    </div>
+                
+                <div class="details">
+                   <a href="#">
+                    <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                    <div class="asking-prices">
+                        <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                        <div class="beds">
+                            <p><i class='bx bx-bed'></i> 5 Beds</p>
+                            <p><i class='bx bx-bath'></i> 5 Baths</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                        <div class="bottom">
+                            <p class="type">Terrace Duplex</p>
+                            <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                            </div>
+                    </div>
+                                    </div>
+                                
+                                    <div class="content">
+                                        <div class="extra-img">
+                                            <section aria-label="Newest Photos">
+                      <div class="carousel" data-carousel>
+                        <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                        <ul data-slides>
+                          
+            
+                            <li class="slide" data-active>
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+            
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                                            </div>
+                        
+                        <div class="details">
+                           <a href="#">
+                            <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                            <div class="asking-prices">
+                                <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                                <div class="beds">
+                                    <p><i class='bx bx-bed'></i> 5 Beds</p>
+                                    <p><i class='bx bx-bath'></i> 5 Baths</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                                <div class="bottom">
+                                    <p class="type">Terrace Duplex</p>
+                                    <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                                    </div>
+                            </div>
+                                            </div>
+                                        
+                                        
+                                    <div class="content">
+                                        <div class="extra-img">
+                                            <section aria-label="Newest Photos">
+                      <div class="carousel" data-carousel>
+                        <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                        <ul data-slides>
+                          
+            
+                            <li class="slide" data-active>
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+            
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                                            </div>
+                        
+                        <div class="details">
+                           <a href="#">
+                            <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                            <div class="asking-prices">
+                                <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                                <div class="beds">
+                                    <p><i class='bx bx-bed'></i> 5 Beds</p>
+                                    <p><i class='bx bx-bath'></i> 5 Baths</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                                <div class="bottom">
+                                    <p class="type">Terrace Duplex</p>
+                                    <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                                    </div>
+                            </div>
+                                            </div>
+                                
+							<div class="content">
+                                <div class="extra-img">
+                                    <section aria-label="Newest Photos">
+              <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                <ul data-slides>
+                  
+    
+                    <li class="slide" data-active>
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+    
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+                                    </div>
+                
+                <div class="details">
+                   <a href="#">
+                    <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                    <div class="asking-prices">
+                        <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                        <div class="beds">
+                            <p><i class='bx bx-bed'></i> 5 Beds</p>
+                            <p><i class='bx bx-bath'></i> 5 Baths</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                        <div class="bottom">
+                            <p class="type">Terrace Duplex</p>
+                            <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                            </div>
+                    </div>
+                                    </div>
+                                
+                                
+							<div class="content">
+                                <div class="extra-img">
+                                    <section aria-label="Newest Photos">
+              <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                <ul data-slides>
+                  
+    
+                    <li class="slide" data-active>
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+    
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>for sale</span>
+                        </div>
+                    <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                  <li class="slide">
+                    <a href="#">
+                        <div class="captions">
+                        <span>featured</span>
+                        <span>new listing</span>
+                        <span>off plan project</span>
+                        </div>
+                    <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                    <div class="under-caption">
+                        <p class="price">from <span>₦450,000,000</span></p>
+                        </div>
+                        </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+                                    </div>
+                
+                <div class="details">
+                   <a href="#">
+                    <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                    <div class="asking-prices">
+                        <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                        <div class="beds">
+                            <p><i class='bx bx-bed'></i> 5 Beds</p>
+                            <p><i class='bx bx-bath'></i> 5 Baths</p>
+                            </div>
+                        </div>
+                    </a>
+    
+                        <div class="bottom">
+                            <p class="type">Terrace Duplex</p>
+                            <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                            </div>
+                    </div>
+                                    </div>
+                                
+                                    <div class="content">
+                                        <div class="extra-img">
+                                            <section aria-label="Newest Photos">
+                      <div class="carousel" data-carousel>
+                        <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                        <ul data-slides>
+                          
+            
+                            <li class="slide" data-active>
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+            
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                                            </div>
+                        
+                        <div class="details">
+                           <a href="#">
+                            <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                            <div class="asking-prices">
+                                <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                                <div class="beds">
+                                    <p><i class='bx bx-bed'></i> 5 Beds</p>
+                                    <p><i class='bx bx-bath'></i> 5 Baths</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                                <div class="bottom">
+                                    <p class="type">Terrace Duplex</p>
+                                    <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                                    </div>
+                            </div>
+                                            </div>
+                                        
+                                        
+                                    <div class="content">
+                                        <div class="extra-img">
+                                            <section aria-label="Newest Photos">
+                      <div class="carousel" data-carousel>
+                        <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-right"></i></button>
+                        <ul data-slides>
+                          
+            
+                            <li class="slide" data-active>
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1.jpg" alt="Nature Image #1">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+            
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet 2.jpg" alt="Nature Image #2">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>for sale</span>
+                                </div>
+                            <img src="../../images/abuja.jpg" alt="Nature Image #3">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                          <li class="slide">
+                            <a href="#">
+                                <div class="captions">
+                                <span>featured</span>
+                                <span>new listing</span>
+                                <span>off plan project</span>
+                                </div>
+                            <img src="images/5BEDROOM CONTEMPORARY DETACHED DUPLEX lekki phase 1 closet.jpg" alt="Nature Image #4">
+                            <div class="under-caption">
+                                <p class="price">from <span>₦450,000,000</span></p>
+                                </div>
+                                </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </section>
+                                            </div>
+                        
+                        <div class="details">
+                           <a href="#">
+                            <h5>5BEDROOM CONTEMPORARY DETACHED DUPLEX</h5>
+                            <div class="asking-prices">
+                                <p class="map"><i class='bx bx-map-pin'></i>  <span>Lekki Phase 1, Lagos Nigeria</span></p>
+                                <div class="beds">
+                                    <p><i class='bx bx-bed'></i> 5 Beds</p>
+                                    <p><i class='bx bx-bath'></i> 5 Baths</p>
+                                    </div>
+                                </div>
+                            </a>
+            
+                                <div class="bottom">
+                                    <p class="type">Terrace Duplex</p>
+                                    <p class="view"><a href="#">View Details</a> <i class='bx bx-heart'></i></p>
+                                    </div>
+                            </div>
+                                            </div>
+							</div>
 
                     <div class="pagination">
-    <ul> <!--pages or li are comes from javascript --> </ul>
-  </div>
+                        <ul> 
+                           <li class="prev"><i class='bx bx-chevrons-left'></i></li>
+                           <li>1</li>
+                           <li>2</li>
+                           <li>3</li>
+                           <li>4</li>
+                           <li class="next"><i class='bx bx-chevrons-right'></i></li> 
+                        </ul>
+                    </div>
 
 
-                    <div class="footer-content">
+                    <!-- <div class="footer-content">
                         <div class="filter-content-footer">
                         <p>
                             The data relating to real estate for sale on this web site comes in part from the Lake Country Board Of REALTORS. Real estate listings held by brokerage firms other than Riezl Baker are marked with the IDX logo and detailed information about them includes the name of the listing brokers.
@@ -1381,26 +1598,29 @@
 
                         <p>©2023 Lake Country Board Of REALTORS. All rights reserved.</p>
                         </div>
+                        </div> -->
                         </div>
-                        </div>
-                    </div>
+                    
             </div>
         </div>
     </div>
 
 
-
-
+    <!-- jQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Lightbox JS -->
+    <script src="js/main-slider.js"></script>
     <script src="js/pagination.js"></script>
-    <script src="js/slider.js"></script>
-    <!-- <script src="js/slider2.js"></script> -->
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/list.js"></script>
-<script src="js/tiny-slider.js"></script>
-<script src="js/aos.js"></script>
-<script src="js/navbar.js"></script>
-<script src="js/counter.js"></script>
-<script src="js/custom.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="../../js/virtual-select.min.js"></script>
+	<script src="../../js/virtual-select.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3a0e5f4a59.js" crossorigin="anonymous"></script>
+    <script src="../../js/tiny-slider.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/aos.js"></script>
+    <script src="../../js/counter.js"></script>
+    <script src="../../js/custom.js"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>

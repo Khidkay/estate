@@ -42,42 +42,25 @@
 <title>Inquiry Form - Jalvin Homes</title>
 <script nonce="c09ee2d6-f690-4318-9cb3-6638faad099e">(function(w,d){!function(f,g,h,i){f[h]=f[h]||{};f[h].executed=[];f.zaraz={deferred:[],listeners:[]};f.zaraz.q=[];f.zaraz._f=function(j){return function(){var k=Array.prototype.slice.call(arguments);f.zaraz.q.push({m:j,a:k})}};for(const l of["track","set","debug"])f.zaraz[l]=f.zaraz._f(l);f.zaraz.init=()=>{var m=g.getElementsByTagName(i)[0],n=g.createElement(i),o=g.getElementsByTagName("title")[0];o&&(f[h].t=g.getElementsByTagName("title")[0].text);f[h].x=Math.random();f[h].w=f.screen.width;f[h].h=f.screen.height;f[h].j=f.innerHeight;f[h].e=f.innerWidth;f[h].l=f.location.href;f[h].r=g.referrer;f[h].k=f.screen.colorDepth;f[h].n=g.characterSet;f[h].o=(new Date).getTimezoneOffset();if(f.dataLayer)for(const s of Object.entries(Object.entries(dataLayer).reduce(((t,u)=>({...t[1],...u[1]})))))zaraz.set(s[0],s[1],{scope:"page"});f[h].q=[];for(;f.zaraz.q.length;){const v=f.zaraz.q.shift();f[h].q.push(v)}n.defer=!0;for(const w of[localStorage,sessionStorage])Object.keys(w||{}).filter((y=>y.startsWith("_zaraz_"))).forEach((x=>{try{f[h]["z_"+x.slice(7)]=JSON.parse(w.getItem(x))}catch{f[h]["z_"+x.slice(7)]=w.getItem(x)}}));n.referrerPolicy="origin";n.src="../../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(f[h])));m.parentNode.insertBefore(n,m)};["complete","interactive"].includes(g.readyState)?zaraz.init():f.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
 <body>     
-    <div class="header" id="headers">
-		<div class="header__logo">
-		  <a href="index.html"> <img src="images/jalvinlogofooter.png" alt=""></a>
-		</div>
-		<div class="header__navigation-links">
-		  <div
-			class="header__hamburger-icon"
-			id="header__hamburger-icon"
-			onclick=" showHideNavbar()"
-		  >
-			<span id="header__hamburger-top-line"></span>
-			<span id="header__hamburger-middle-line"></span>
-			<span id="header__hamburger-bottom-line"></span>
-		  </div>
-		  <div class="header__links" id="header__nav-links">
-			<a href="about.html">meet jennifer</a>
-			<button class="has-children">properties <span class="fas fa-chevron-down"></span>
-			  <ul class="dropdown">
-				  <li><a href="#">featured properties</a></li>
-				  <li><a href="#">all properties</a></li>
-				  <li><a href="#">past transactions</a></li>
-			  </ul>
-		  </button>
-				<a href="homesearch.html">home search</a>
-				<a href="inquiry.html">inquiry form</a>
-			<a href="contact.html">let's connect</a>
-			<a href="tel:+2349021348995">(+234)9021348995</a>
-			<div class="header__social">
-			  <a href="https://www.instagram.com/jal_vin_homes/" target="_blank">
-				<img src="images/ig_logo.png" alt="ig icon" />
-			  </a>
-			</div>
-		  </div>
-		</div>
-	  </div>
+    
+	
 
+	
+	<header>
+		<div class="header-content">
+			<div class="logo"><a href="index.html"><img src="images/jalvinlogofooter.png" alt=""></a></div>
+
+			<div class="nav-links">
+				<li><a href="index.html" class="nav-item">home</a></li>
+				<li><a href="about.html" class="nav-item">Meet Jennifer</a></li>
+				<li><a href="homesearch.html" class="nav-item">property listings</a></li>
+				<li><a href="inquiry.html" class="nav-item">inquiry</a></li>
+				<li><a href="contact.html" class="nav-item">Contact me</a></li>
+				<li><a href="tel:+2349021348995" class="nav-item tel">(+234)9021348995</a></li>
+			</div>
+			<button class="toggle"><i class='bx bx-menu-alt-right'></i></button>
+		</div>
+	</header>
 
 
 <div class="inquiry section">
