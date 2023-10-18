@@ -4,6 +4,11 @@ window.addEventListener("scroll", function(){
   header.classList.toggle("sticky", window.scrollY > 100);
   });
 
+  window.addEventListener("scroll", function(){
+    var phone = document.getElementById("phone");
+    phone.classList.toggle("fixed", window.scrollY > 100);
+    });
+
   let menu = document.querySelector('#navbar_toggle');
       let navbar = document.querySelector('#navbars');
 
