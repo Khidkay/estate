@@ -33,12 +33,12 @@ function fillColor(){
 
 
 
-let slider = document.querySelector('#btn');
-let filter = document.querySelector('.filter-spaces');
+let slider = document.querySelector('#btns');
+let filter = document.querySelector('.filter-space');
 
 slider.onclick = () => {
     slider.classList.toggle('bx-x');
-    filter.classList.toggle ('opens');
+    filter.classList.toggle ('show');
 }
 
 

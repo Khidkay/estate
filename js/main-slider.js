@@ -18,6 +18,16 @@ window.addEventListener("scroll", function(){
       }
 
 
+      
+
+  let btn = document.querySelector('#btns');
+  let filterSpace = document.querySelector('#filterspace');
+
+  btn.onclick = () => {
+    btn.classList.toggle('bx-x');
+    filterSpace.classList.toggle('show');
+  }
+
 
 
 
@@ -46,11 +56,11 @@ $(document).ready(function() {
       prefix: '₦'
     });
     noUiSlider.create(rangeSlider, {
-      start: [1000000, 500000000],
+      start: [1000000, 900000000],
       step: 1000000,
       range: {
         'min': [10000000],
-        'max': [1000000000]
+        'max': [9000000000]
       },
       format: moneyFormat,
       connect: true
