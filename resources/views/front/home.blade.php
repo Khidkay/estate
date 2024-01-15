@@ -401,7 +401,7 @@
 				<div class="item">
 				<a href="contact.html">
 					<div class="space-img">
-						<img src="{{ asset('images/img4.jpeg" alt="">
+						<img src="{{ asset('images/img4.jpeg') }}" alt="">
 						<div class="space-caption">
 							<p>let's connect</p>
 							</div>
