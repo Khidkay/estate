@@ -246,7 +246,7 @@
 									<span>new listing</span>
 									</div>
 								</div>
-							<a href="propertylisting/lekki-pride-3.html"><img src="images/lekki-pride.jpg" alt=""></a>
+							<a href="propertylisting/lekki-pride-3.html"><img src="{{ asset('images/lekki-pride.jpg') }}" alt=""></a>
 
 							<div class="info">
 								<div class="price">
@@ -268,13 +268,13 @@
 									</div>
 
 									<div class="content">
-										<p> <img src="images/icons8-triangular-ruler-99.png" alt=""> 300 and 500 <span>sqm</span></p>
+										<p> <img src="{{ asset('images/icons8-triangular-ruler-99.png') }}" alt=""> 300 and 500 <span>sqm</span></p>
 										<p>residential land</p>
 										</div>
 
 										<div class="author">
-											<p><img src="images/icons8-user-50.png" alt=""> jennifer barap</p>
-											<p><img src="images/icons8-calender-85.png" alt=""> 10 months ago</p>
+											<p><img src="{{ asset('images/icons8-user-50.png') }}" alt=""> jennifer barap</p>
+											<p><img src="{{ asset('images/icons8-calender-85.png') }}" alt=""> 10 months ago</p>
 											</div>
 									</a>
 								</div>
@@ -289,7 +289,7 @@
 									<span>new listing</span>
 									</div>
 								</div>
-							<a href="#"><img src="images/home2.jpg" alt=""></a>
+							<a href="#"><img src="{{ asset('images/home2.jpg') }}" alt=""></a>
 
 							
 							<div class="info">
@@ -314,13 +314,13 @@
 									
 
 									<div class="content">
-										<p> <img src="images/icons8-triangular-ruler-99.png" alt=""> 500 and 600 sqm</p>
+										<p> <img src="{{ asset('images/icons8-triangular-ruler-99.png') }}" alt=""> 500 and 600 sqm</p>
 										<p>residential land</p>
 										</div>
 
 										<div class="author">
-											<p><img src="images/icons8-user-50.png" alt=""> jennifer barap</p>
-											<p><img src="images/icons8-calender-85.png" alt=""> 10 months ago</p>
+											<p><img src="{{ asset('images/icons8-user-50.png') }}" alt=""> jennifer barap</p>
+											<p><img src="{{ asset('images/icons8-calender-85.png') }}" alt=""> 10 months ago</p>
 											</div>
 									</a>
 								</div>
@@ -336,7 +336,7 @@
 									<span>new listing</span>
 									</div>
 								</div>
-							<img src="images/home3.jpg" alt="">
+							<img src="{{ asset('images/home3.jpg') }}" alt="">
 
 							
 							<div class="info">
@@ -358,13 +358,13 @@
 									</div>
 
 									<div class="content">
-										<p> <img src="images/icons8-triangular-ruler-99.png" alt=""> 500 and 600 sqm</p>
+										<p> <img src="{{ asset('images/icons8-triangular-ruler-99.png') }}" alt=""> 500 and 600 sqm</p>
 										<p>residential land</p>
 										</div>
 
 										<div class="author">
-											<p><img src="images/icons8-user-50.png" alt=""> jennifer barap</p>
-											<p><img src="images/icons8-calender-85.png" alt=""> 10 months ago</p>
+											<p><img src="{{ asset('images/icons8-user-50.png') }}" alt=""> jennifer barap</p>
+											<p><img src="{{ asset('images/icons8-calender-85.png') }}" alt=""> 10 months ago</p>
 											</div>
 								</div>
 						</div>
@@ -377,7 +377,7 @@
 			<div class="item">
 				<a href="homesearch.html">
 					<div class="space-img">
-						<img src="images/chevron_sittingroom.jpg" alt="">
+						<img src="{{ asset('images/chevron_sittingroom.jpg') }}" alt="">
 						<div class="pad">
 							<div class="space-caption">
 							<p>home search</p>
@@ -390,7 +390,7 @@
 				<div class="item">
 				<a href="#">
 					<div class="space-img">
-						<img src="images/home3.jpg" alt="">
+						<img src="{{ asset('images/home3.jpg') }}" alt="">
 						<div class="space-caption">
 							<p>home listings</p>
 							</div>
@@ -401,7 +401,7 @@
 				<div class="item">
 				<a href="contact.html">
 					<div class="space-img">
-						<img src="images/img4.jpeg" alt="">
+						<img src="{{ asset('images/img4.jpeg" alt="">
 						<div class="space-caption">
 							<p>let's connect</p>
 							</div>
@@ -416,7 +416,7 @@
 		<div class="row justify-content-between mb-5">
 			<div class="col-lg-6 mb-5 mb-lg-0">
 				<div class="img-about">
-					<img src="images/jalvin.png" alt="Image" class="img-fluid">
+					<img src="{{ asset('images/jalvin.png') }}" alt="Image" class="img-fluid">
 				</div>
 			</div>
 			<div class="col-lg-6">
@@ -456,7 +456,7 @@ Is there anyway i can help you ? You can talk to me now.....
 										<p>Abuja</p>
 										</div>
 									<div class="resident-apt">
-										<img src="images/abuja.jpg" alt="">
+										<img src="{{ asset('images/abuja.jpg') }}" alt="">
 										</div>
 			
 										<div class="details">
@@ -477,7 +477,7 @@ Is there anyway i can help you ? You can talk to me now.....
 								<p>semi detached duplex</p>
 								</div>
 							<div class="resident-apt">
-								<img src="images/whitehouse.jpg" alt="">
+								<img src="{{ asset('images/whitehouse.jpg') }}" alt="">
 								</div>
 	
 								<div class="details">
@@ -493,7 +493,7 @@ Is there anyway i can help you ? You can talk to me now.....
 									<p>Fully detached duplex</p>
 									</div>
 								<div class="resident-apt">
-									<img src="images/white-front.jpg" alt="">
+									<img src="{{ asset('images/white-front.jpg') }}" alt="">
 									</div>
 									<div class="details">
 										<p>more details</p>
@@ -509,7 +509,7 @@ Is there anyway i can help you ? You can talk to me now.....
 									<p>lagos island</p>
 									</div>
 								<div class="resident-apt">
-									<img src="images/Lekki_link_bridge_at_night.jpg" alt="">
+									<img src="{{ asset('images/Lekki_link_bridge_at_night.jpg') }}" alt="">
 									</div>
 									<div class="details">
 										<p>more details</p>
@@ -537,7 +537,7 @@ Is there anyway i can help you ? You can talk to me now.....
 									<p>terrace duplex</p>
 									</div>
 								<div class="resident-apt">
-									<img src="images/home3.jpg" alt="">
+									<img src="{{ asset('images/home3.jpg') }}" alt="">
 									</div>
 		
 									<div class="details">
@@ -552,7 +552,7 @@ Is there anyway i can help you ? You can talk to me now.....
 									<p>ibadan</p>
 									</div>
 								<div class="resident-apt">
-									<img src="images/home3.jpg" alt="">
+									<img src="{{ asset('images/home3.jpg') }}" alt="">
 									</div>
 									<div class="details">
 										<p>more details</p>
@@ -579,7 +579,7 @@ Is there anyway i can help you ? You can talk to me now.....
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 display">
 								<div class="main-reason">
 									<div class="reason-pic">
-									<img src="images/home2.jpg" alt="">
+									<img src="{{ asset('images/home2.jpg') }}" alt="">
 									</div>
 									</div>
 									</div>
@@ -591,7 +591,7 @@ Is there anyway i can help you ? You can talk to me now.....
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 display">
 								<div class="main-reason">
 									<div class="reason-pic">
-									<img src="images/abuja.jpg" alt="">
+									<img src="{{ asset('images/abuja.jpg') }}" alt="">
 									</div>
 									</div>
 									</div>
@@ -627,7 +627,7 @@ Is there anyway i can help you ? You can talk to me now.....
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 display">
 								<div class="main-reason">
 									<div class="reason-pic">
-									<img src="images/whitehouse.jpg" alt="">
+									<img src="{{ asset('images/whitehouse.jpg') }}" alt="">
 									</div>
 									</div>
 									</div>
@@ -639,7 +639,7 @@ Is there anyway i can help you ? You can talk to me now.....
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 display">
 								<div class="main-reason">
 									<div class="reason-pic">
-									<img src="images/home3.jpg" alt="">
+									<img src="{{ asset('images/home3.jpg') }}" alt="">
 									</div>
 									</div>
 									</div>
@@ -700,7 +700,7 @@ Is there anyway i can help you ? You can talk to me now.....
 				<div class="testimonial-slider">
 				<div class="item">
 				<div class="testimonial">
-				<img src="images/client-couple.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+				<img src="{{ asset('images/client-couple.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 				<h3 class="h5 text-primary">James Smith</h3>
 				<blockquote>
 				<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -710,7 +710,7 @@ Is there anyway i can help you ? You can talk to me now.....
 				</div>
 				<div class="item">
 				<div class="testimonial">
-				<img src="images/client-single.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+				<img src="{{ asset('images/client-single.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 				<h3 class="h5 text-primary">Carol Houston</h3>
 				<blockquote>
 				<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -720,7 +720,7 @@ Is there anyway i can help you ? You can talk to me now.....
 				</div>
 				<div class="item">
 				<div class="testimonial">
-				<img src="images/client-female.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+				<img src="{{ asset('images/client-female.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 				<h3 class="h5 text-primary">Synthia Cameron</h3>
 				<blockquote>
 				<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -730,7 +730,7 @@ Is there anyway i can help you ? You can talk to me now.....
 				</div>
 				<div class="item">
 				<div class="testimonial">
-				<img src="images/client-single.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+				<img src="{{ asset('images/client-single.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 				<h3 class="h5 text-primary">Davin Smith</h3>
 				<blockquote>
 				<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -741,7 +741,7 @@ Is there anyway i can help you ? You can talk to me now.....
 				
 				<div class="item">
 					<div class="testimonial">
-					<img src="images/client-single.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+					<img src="{{ asset('images/client-single.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 					<h3 class="h5 text-primary">Davin Smith</h3>
 					<blockquote>
 					<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -752,7 +752,7 @@ Is there anyway i can help you ? You can talk to me now.....
 					
 				<div class="item">
 					<div class="testimonial">
-					<img src="images/client-single.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+					<img src="{{ asset('images/client-single.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 					<h3 class="h5 text-primary">Davin Smith</h3>
 					<blockquote>
 					<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -763,7 +763,7 @@ Is there anyway i can help you ? You can talk to me now.....
 					
 				<div class="item">
 					<div class="testimonial">
-					<img src="images/client-single.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+					<img src="{{ asset('images/client-single.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 					<h3 class="h5 text-primary">Davin Smith</h3>
 					<blockquote>
 					<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -774,7 +774,7 @@ Is there anyway i can help you ? You can talk to me now.....
 					
 				<div class="item">
 					<div class="testimonial">
-					<img src="images/client-single.jpg" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
+					<img src="{{ asset('images/client-single.jpg') }}" alt="Image" class="img-fluid rounded-circle w-25 mb-4">
 					<h3 class="h5 text-primary">Davin Smith</h3>
 					<blockquote>
 					<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -806,7 +806,7 @@ Is there anyway i can help you ? You can talk to me now.....
 							<div class="row">
 								<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb-5">
 									<div class="big-post mb-4">
-										<img src="images/home3.jpg" alt="">
+										<img src="{{ asset('images/home3.jpg') }}" alt="">
 										<div class="overlay">
 											<p>This is a great #reminder that Real Estate investment is the purest path to grow WEALTH and it’s the only SOLID investment on Earth ✌️…INVEST TODAY…</p>
 											</div>
@@ -816,29 +816,29 @@ Is there anyway i can help you ? You can talk to me now.....
 									<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
 										<div class="small-post">
 											<div class="item">
-												<a href="https://www.instagram.com/p/CuzQ_N8NXmK/?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><img src="images/home4.jpg" alt=""></a>
+												<a href="https://www.instagram.com/p/CuzQ_N8NXmK/?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><img src="{{ asset('images/home4.jpg') }}" alt=""></a>
 												</div>
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												<div class="item">
-												<img src="images/home2.jpg" alt="">
+												<img src="{{ asset('images/home2.jpg') }}" alt="">
 												</div>
 												</div>
 										</div>
@@ -852,85 +852,85 @@ Is there anyway i can help you ? You can talk to me now.....
 					<div class="slide-track">
 
 						<div class="slides">
-							<img src="images/Veritasi-logo.png" alt="">
+							<img src="{{ asset('images/Veritasi-logo.png') }}" alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Victoria-Crest.jpg"  alt="">
+							<img src="{{ asset('images/Victoria-Crest.jpg') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/landmark.png"  alt="">
+							<img src="{{ asset('images/landmark.png') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Landwey-logo.png"alt="">
+							<img src="{{ asset('images/Landwey-logo.png') }}"alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Evermark-logo.png" alt="">
+							<img src="{{ asset('images/Evermark-logo.png') }}" alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/standout.png"  alt="">
+							<img src="{{ asset('images/standout.png') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Gracias-Logo.png"  alt="">
+							<img src="{{ asset('images/Gracias-Logo.png') }}"  alt="">
 						</div>
 						<div class="slides">
-							<img src="images/Veritasi-logo.png" alt="">
-						</div>
-
-						<div class="slides">
-							<img src="images/Victoria-Crest.jpg"  alt="">
+							<img src="{{ asset('images/Veritasi-logo.png') }}" alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/landmark.png"  alt="">
+							<img src="{{ asset('images/Victoria-Crest.jpg') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Landwey-logo.png"alt="">
+							<img src="{{ asset('images/landmark.png') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Evermark-logo.png" alt="">
+							<img src="{{ asset('images/Landwey-logo.png') }}"alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/standout.png"  alt="">
+							<img src="{{ asset('images/Evermark-logo.png') }}" alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Gracias-Logo.png"  alt="">
-						</div>
-						<div class="slides">
-							<img src="images/Veritasi-logo.png" alt="">
+							<img src="{{ asset('images/standout.png') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Victoria-Crest.jpg"  alt="">
+							<img src="{{ asset('images/Gracias-Logo.png') }}"  alt="">
+						</div>
+						<div class="slides">
+							<img src="{{ asset('images/Veritasi-logo.png') }}" alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/landmark.png"  alt="">
+							<img src="{{ asset('images/Victoria-Crest.jpg') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Landwey-logo.png"alt="">
+							<img src="{{ asset('images/landmark.png') }}"  alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Evermark-logo.png" alt="">
+							<img src="{{ asset('images/Landwey-logo.png') }}"alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/standout.png"  alt="">
+							<img src="{{ asset('images/Evermark-logo.png') }}" alt="">
 						</div>
 
 						<div class="slides">
-							<img src="images/Gracias-Logo.png"  alt="">
+							<img src="{{ asset('images/standout.png') }}"  alt="">
+						</div>
+
+						<div class="slides">
+							<img src="{{ asset('images/Gracias-Logo.png') }}"  alt="">
 						</div>
 					</div>
 				</div>
