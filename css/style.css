@@ -7304,7 +7304,7 @@ a{
     z-index: 9999;
     background: #00000096;
     overflow: hidden;
-    display: none;
+    /* display: none; */
    }
 
    @media screen  and (max-width:771px){
